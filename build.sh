@@ -9,11 +9,11 @@ scriptDir="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
 # List all your sandboxes here to build at once (in series)
 sandboxesToBuild=(
-  #hdp-sandbox-name
+  hdp-sandbox-name
   #hdp-sandbox-name-2
   #hdp-sandbox-name-3
 
-  hdf-bagel
+  #hdf-bagel
 )
 
 # For each sandbox, build docker image followed by running its packer job

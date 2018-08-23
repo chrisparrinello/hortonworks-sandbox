@@ -2,11 +2,11 @@
   "builders": [{
     "type": "docker",
     "image": "sandbox-hdp-sandbox-name-pre:{{user `version`}}",
-    "author": "eorendain@hortonworks.com",
+    "author": "chris.parrinello@sproutsocial.com",
     "pull": false,
     "commit": true,
     "privileged": true,
-    "run_command": ["-itd", "-h", "sandbox-hdp.hortonworks.com", "{{.Image}}", "/usr/sbin/init"]
+    "run_command": ["-itd", "-p", "8080:8080", "-h", "sandbox-hdp.hortonworks.com", "{{.Image}}", "/usr/sbin/init"]
   }],
 
   "provisioners":
@@ -28,8 +28,7 @@
         "scripts": [
           "scripts/mysql-setup.sh",
           "scripts/deploys/blueprint.sh",
-          "scripts/deploys/kafka.sh",
-          "scripts/deploys/nifi.sh"
+          "scripts/deploys/hbase-deploy.sh"
         ],
         "execute_command": "{{ .Vars }} /bin/bash -vx {{ .Path }}"
       },
