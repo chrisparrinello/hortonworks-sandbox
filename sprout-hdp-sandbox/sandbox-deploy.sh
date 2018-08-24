@@ -9,7 +9,6 @@ docker run --privileged --name $sandboxName -h $hostname -itd \
 -p 4200:4200 \
 -p 7777:7777 \
 -p 7788:7788 \
--p 8000:8000 \
 -p 8080:8080 \
 -p 8744:8744 \
 -p 8886:8886 \
