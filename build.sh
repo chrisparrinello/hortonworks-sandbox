@@ -9,7 +9,7 @@ scriptDir="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
 # List all your sandboxes here to build at once (in series)
 sandboxesToBuild=(
-  hdp-sandbox-name
+  sprout-hdp-sandbox
   #hdp-sandbox-name-2
   #hdp-sandbox-name-3
 
@@ -19,7 +19,7 @@ sandboxesToBuild=(
 # For each sandbox, build docker image followed by running its packer job
 for sandboxName in "${sandboxesToBuild[@]}";
 do
-  docker build -t sandbox-$sandboxName-pre:$version $scriptDir/$sandboxName
+  docker build -t $sandboxName-pre:$version $scriptDir/$sandboxName
 
   cd $scriptDir/$sandboxName
   packer build -var "version=$version" packer.json

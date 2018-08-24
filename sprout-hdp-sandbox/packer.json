@@ -1,7 +1,7 @@
 {
   "builders": [{
     "type": "docker",
-    "image": "sandbox-hdp-sandbox-name-pre:{{user `version`}}",
+    "image": "sprout-hdp-sandbox-pre:{{user `version`}}",
     "author": "chris.parrinello@sproutsocial.com",
     "pull": false,
     "commit": true,
@@ -52,7 +52,7 @@
   "post-processors": [
     {
       "type": "docker-tag",
-      "repository": "sandbox-hdp-sandbox-name",
+      "repository": "sprout-hdp-sandbox",
       "tag": "{{user `version`}}"
     }
   ]

@@ -1,6 +1,6 @@
 FROM orendain/sandbox-hdp-core:0.5.0
 
-LABEL maintainer="eorendain@hortonworks.com"
+LABEL maintainer="chris.parrinello@sproutsocial.com"
 
 # New Ambari service startup
 COPY assets/service-startup.sh /sandbox/ambari/service-startup.sh

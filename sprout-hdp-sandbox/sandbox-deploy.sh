@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-sandboxName="sandbox-hdp-sandbox"
-sandboxImage="sandbox-hdp-sandbox-name:1.0"
+sandboxName="sprout-hdp-sandbox"
+sandboxImage="sprout-hdp-sandbox:1.0"
 hostname="sandbox-hdp.hortonworks.com"
 
 docker run --privileged --name $sandboxName -h $hostname -itd \
